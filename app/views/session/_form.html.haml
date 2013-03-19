@@ -1,0 +1,15 @@
+.row
+  .large-12.columns
+    %h3 Login
+    = form_tag(login_path, :remote => true) do
+      = label_tag 'Username'
+      = text_field_tag 'username'
+      = label_tag 'Password'
+      = password_field_tag 'password'
+      .row
+        .large-3.columns
+          = submit_tag 'Submit', :class => 'button success'
+          = link_to('Cancel', '#', :class => 'button right', :'data-clear-form' => true)
+    - if flash[:notice]
+      .alert-box.alert
+        = flash[:notice]

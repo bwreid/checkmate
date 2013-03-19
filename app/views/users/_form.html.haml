@@ -1,0 +1,17 @@
+.row
+  .large-12.columns
+    %h3 Register
+    = form_for @user, remote: true do |f|
+      = f.label :username
+      = f.text_field :username
+      = f.label :password
+      = f.password_field :password
+      = f.label :password_confirmation
+      = f.password_field :password_confirmation
+      .row
+        .large-4.columns
+          = f.submit 'Register', :class => 'button success'
+          = link_to('Cancel', '#', :class => 'button right', :'data-clear-form' => true)
+    - if flash[:notice]
+      .alert-box.alert
+        = flash[:notice]
