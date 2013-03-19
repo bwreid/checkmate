@@ -7,8 +7,10 @@
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #  user_id    :integer
+#
 
-class Bank < ActiveRecord::Base
-  attr_accessible :name
-  belongs_to :users
+require 'spec_helper'
+
+describe Bank do
+  pending "add some examples to (or delete) #{__FILE__}"
 end

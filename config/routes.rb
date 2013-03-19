@@ -5,4 +5,5 @@ Checkmate::Application.routes.draw do
 
   resources :users, :only => [:new, :create]
   root :to => 'home#index'
+  resources :banks, :only => [:new, :create, :destroy]
 end
