@@ -1,0 +1,6 @@
+%table
+  %tr
+    %th
+  - @banks.each do |bank|
+    %tr
+      %td= link_to(bank.name, bank, :class => 'button tiny radius success')
