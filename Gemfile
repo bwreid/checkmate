@@ -15,6 +15,17 @@ group :assets do
 end
 
 group :development, :test do
+  gem 'coffee-rails-source-maps'
+
+  gem 'factory_girl_rails'
+  gem 'guard-rspec'
+  gem 'rb-fsevent'
+
+  gem 'rspec-rails'
+  gem 'capybara' # TESTING FRAMEWORK FOR WEB BROWSER
+  gem 'launchy' # LAUNCHES THE WEB BROWSER WHEN YOU'RE DOING CAPYBARA TESTING
+  gem 'database_cleaner' # CLEANS OUT YOUR DATABASE ON EVERY TEST RUN
+
   gem 'pry-rails'
   gem 'pry-debugger'
   gem 'pry-stack_explorer'
