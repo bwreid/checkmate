@@ -12,5 +12,10 @@
 require 'spec_helper'
 
 describe User do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '.create' do
+    it 'should save a new user object to the database' do
+      User.create( username: 'x', password: 'x', password_confirmation: 'x' )
+      User.first.username.should eq 'x'
+    end
+  end
 end

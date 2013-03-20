@@ -1,0 +1,6 @@
+<% if @user.id %>
+$('#login-form').slideUp(400);
+$('.nav-wrapper').empty().append('<%=j render partial: 'shared/nav' %>');
+<% else %>
+$('#login-form').empty().append('<%=j render partial: 'form' %>');
+<% end %>
