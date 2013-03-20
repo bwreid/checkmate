@@ -1,8 +1,10 @@
 .row
   .large-3.columns
-    = form_for @banks, :remote => true do |f|
-      = f.label :name
-      = f.text_field :name, :autofocus => true
+    = form_tag transfer_amt_banks_path, :remote => true do
+      = select_tag 'from', options_from_collection_for_select(@banks, "id", "name")
+      = select_tag 'to', options_from_collection_for_select(@banks, "id", "name")
+      = label_tag :amount
+      = text_field_tag :amount
       = link_to 'Cancel', '#', :'data-clear-form' => true, :class => 'button tiny radius alert'
-      = f.submit nil, :class => 'button tiny radius success'
+      = submit_tag nil, :class => 'button tiny radius success'
   .large-9.columns
