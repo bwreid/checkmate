@@ -8,8 +8,8 @@
       = f.label :tdate
       = f.text_field :tdate
       = f.label :is_deposit, 'Deposit'
-      = f.radio_button :is_deposit, :checked => true
+      = f.radio_button :is_deposit, true
       = f.label :is_deposit, 'Withdrawal'
-      = f.radio_button :is_deposit, :checked => false
+      = f.radio_button :is_deposit, false
       = f.submit nil, :class => 'button radius'
   .seven.columns

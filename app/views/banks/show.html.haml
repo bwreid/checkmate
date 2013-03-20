@@ -4,11 +4,13 @@
     = link_to('New Transaction', new_transaction_path, :remote => true, :class => 'button radius', :'data-bank-id' => @bank.id)
     #transaction_form
     %h3 Deposits
+    #bid= @bank.id
+    =link_to("Deposit Data", deposit_info_bank_path, :remote => true, :class => "button radius")
+    =link_to("Deposit Chart", "#", :class => "button radius", :id => "dep_chart_btn")
     #deposits
     %h3 Withdrawals
     #withdrawals
-
-
-
-
+    =link_to("Withdrawal Data", withdrawal_info_bank_path, :remote => true, :class => "button radius")
+    =link_to("Withdrawal Chart", "#", :class => "button radius", :id => "wit_chart_btn")
+    #withdrawals
 
