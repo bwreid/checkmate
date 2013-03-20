@@ -11,5 +11,13 @@ class BanksController < ApplicationController
     @banks = Bank.order(:name)
   end
 
+  def show
+    bank = Bank.find(params[:id])
+  end
+
+  def transfer
+    bank = Bank.find(params[:bank])
+  end
+
 end
 

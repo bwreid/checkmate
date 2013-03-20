@@ -35,5 +35,6 @@ describe 'Banks' do
       page.should have_link('Chase')
     end
   end
+
 end
 

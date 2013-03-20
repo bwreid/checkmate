@@ -6,4 +6,4 @@ class Home
     e.preventDefault()
     $('#bankform').empty()
 
-$(document).ready(Home.document_ready);
+$(document).ready(Home.document_ready)
