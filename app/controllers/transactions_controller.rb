@@ -23,5 +23,6 @@ class TransactionsController < ApplicationController
     end
     @deposits = bank.transactions.select{|x| x.is_deposit == true}
     @withdrawals = bank.transactions.select{|x| x.is_deposit == false}
+    @bank = Bank.find( params[:bank_id])
   end
 end

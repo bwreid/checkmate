@@ -30,6 +30,7 @@ class BanksController < ApplicationController
     else
       @message = "You did not have enough money in #{from.name} to transfer $#{amt}"
     end
+    @banks = @auth.banks.order(:name)
   end
 
   def show

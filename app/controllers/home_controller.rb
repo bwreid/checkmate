@@ -1,5 +1,7 @@
 class HomeController < ApplicationController
   def index
-    @banks = @auth.banks
+    if @auth
+      @banks = @auth.banks
+    end
   end
 end

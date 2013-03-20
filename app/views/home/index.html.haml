@@ -1,14 +1,12 @@
 #login-form
-
+.galaxy
+  .row.cell-block
+    .large-6.columns.large-centered
+      %h1{ :class => 'hero' } <span>Checkmate</span>
+      %h3{ :style => 'text-align: center; padding-bottom: 30px;'} Checkmate makes it easier to track and manage your accounts.
 .row
-  .small-12.columns
-    %h1 Welcome to Bankr!
-.row
-  .small-8.small-centered.columns
-    = link_to('New Bank', new_bank_path, :remote => true, :class => 'button tiny')
-    = link_to('Transfer', transfer_banks_path, :remote => true, :class => 'button tiny')
-    #bankform
-    #banks
-      = render :partial => "banks/banks"
-    #transfer_form
-
+  .large-12.columns
+    .bank-navigation
+      = render partial: 'banks/banks'
+%script
+  = "$('.galaxy').height( $(window).height() - 45 );" if @auth.nil?

@@ -12,19 +12,19 @@ $em-base: 16px;
 
 // We use these to control various global styles
 $body-bg: #fff;
-$body-font-color: #222;
-$body-font-family: Helvetica, Arial, serif;
-$body-font-weight: normal;
+$body-font-color: #2E2E2E;
+$body-font-family: 'Open Sans', Helvetica, Arial, serif;
+$body-font-weight: 300;
 $body-font-style: normal;
 
 // We use these to control text direction settings
 $text-direction: ltr;
 
 // We use these as default colors throughout
-$primary-color: #17455C;
-$secondary-color: #E1CAAB;
-$alert-color: #FA4913;
-$success-color: #FE8333;
+$primary-color: #E89041;
+$secondary-color: #7F7F7F;
+$alert-color: #B2382D;
+$success-color: #E89041;
 
 // We use these to make sure border radius matches unless we want it different.
 $global-radius: 3px;

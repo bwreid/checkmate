@@ -7,11 +7,11 @@ class SessionController < ApplicationController
     if user.present? && user.authenticate( params[:password] )
       session[:user_id] = user.id
       @auth = user
+      @banks = user.banks
     else
       flash[:notice] = 'Something went wrong!'
       @auth = nil
     end
-    authentication
   end
 
   def destroy
