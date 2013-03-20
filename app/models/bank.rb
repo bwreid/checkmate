@@ -12,4 +12,9 @@ class Bank < ActiveRecord::Base
   attr_accessible :name
   belongs_to :users
   has_many :transactions
+
+  def balance
+    balance = self.transactions.map(&:amount).sum
+    return balance
+  end
 end

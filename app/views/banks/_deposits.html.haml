@@ -1,5 +1,10 @@
-%ul
-  -@deposits.each do |deposit|
-    %li= number_to_currency(deposit.amount)
-    %li= deposit.tdate
-    %li= deposit.notes
+%table#deposits_table
+  %tr
+    %th Amount
+    %th Date
+    %th Note
+    -@deposits.each do |deposit|
+      %tr
+        %td= number_to_currency(deposit.amount)
+        %td= deposit.tdate
+        %td= deposit.notes

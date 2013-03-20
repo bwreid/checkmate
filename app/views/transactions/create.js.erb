@@ -1,1 +1,3 @@
-alert('!');
+$("#deposits").empty().append("<%=j render :partial => 'banks/deposits' %>");
+$("#withdrawals").empty().append("<%=j render :partial => 'banks/withdrawals'%>");
+$("#transaction_form").empty().text("<%=j @message %>");
