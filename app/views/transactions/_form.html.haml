@@ -1,0 +1,15 @@
+.row
+  .five.columns
+    = form_for @transaction, :remote => true do |f|
+      = f.label :amount, :autofocus => true
+      = f.text_field :amount
+      = f.label :notes
+      = f.text_field :notes
+      = f.label :tdate
+      = f.text_field :tdate
+      = f.label :is_deposit, 'Deposit'
+      = f.radio_button :is_deposit, true
+      = f.label :is_deposit, 'Withdrawal'
+      = f.radio_button :is_deposit, false
+      = f.submit nil, :class => 'button radius'
+  .seven.columns
