@@ -1,6 +1,14 @@
 .row
   .small-8.small-centered.columns
+    = @bank.id
+    = link_to('New Transaction', new_transaction_path, :remote => true, :class => 'button radius', :'data-bank-id' => @bank.id)
+    #transaction_form
     %h3 Deposits
     #deposits
     %h3 Withdrawals
     #withdrawals
+
+
+
+
+

@@ -1,0 +1,3 @@
+var hidden = $('<input type="hidden" id="bank_id" name="bank_id" type="text">').val($('a[data-bank-id]').attr('data-bank-id'));
+$('#transaction_form').append('<%=j render(:partial => 'form') %>');
+$('form').prepend(hidden);
