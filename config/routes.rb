@@ -10,5 +10,12 @@ Checkmate::Application.routes.draw do
       get :transfer
       post :transfer_amt
     end
+    member do
+      get :deposit_info
+      get :deposit_chart
+      get :withdrawal_info
+      get :withdrawal_chart
+    end
   end
+  resources :transactions
 end

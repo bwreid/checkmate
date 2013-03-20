@@ -1,0 +1,5 @@
+%ul
+  -@withdrawals.each do |withdrawal|
+    %li= number_to_currency(withdrawal.amount)
+    %li= withdrawal.tdate
+    %li= withdrawal.notes

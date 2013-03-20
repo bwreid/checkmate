@@ -8,6 +8,8 @@
 #  notes      :string(255)
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
+#  bank_id    :integer
+#  is_deposit :boolean
 #
 
 require 'spec_helper'
