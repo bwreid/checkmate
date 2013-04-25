@@ -1,1 +1,3 @@
 $('.bank-navigation').empty().append('<%=j render partial: 'banks/banks' %>');
+var p = $("<p>").text("<%=j @message %>")
+$(".alert").empty().prepend(p).fadeOut(5000);

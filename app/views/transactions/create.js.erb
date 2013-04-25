@@ -1,4 +1,4 @@
 $('.balance').empty().append("<%=j render :partial => 'banks/just_the_balance' %>")
 $("#deposits").empty().append("<%=j render :partial => 'banks/deposits' %>");
 $("#withdrawals").empty().append("<%=j render :partial => 'banks/withdrawals'%>");
-$("#transaction_form").empty().text("<%=j @message %>");
+$("#transaction_form").empty().text("<%=j @message %>").fadeOut(5000);
